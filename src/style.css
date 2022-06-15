@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,2), 0 6px 6px rgba(0,0,0,3);
+    background-color: rgb(161, 33, 33);
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+    display: flex;
+    
+    
+}
+ul li{
+    color: black; 
+    margin:2rem;
+
+}
+ul a{
+    text-decoration: none;
+}
+ul a:hover{
+  background-color: white;
+}
