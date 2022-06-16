@@ -9,7 +9,7 @@ export default function Navbar() {
         <ul>
         <a href='#'><h3><li>About</li></h3></a>
         <a href='#'><h3><li>Contact</li></h3></a>
-        <a href='#'><h3><li>More</li></h3></a>
+        <a href="#"><h3><li>More</li></h3></a>
             
         </ul>
         </nav>  
