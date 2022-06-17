@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import main from "../../images/main.png";
-export default function Main() {
+export default function Main(props) {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPass, setEnteredPass] = useState("");
+  const [enteredText, setEnteredText] = useState("");
 
   const emailHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -10,23 +11,33 @@ export default function Main() {
   const passHandler = (event) => {
     setEnteredPass(event.target.value);
   };
+  const textHandler = (event) => {
+    setEnteredText(event.target.value);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
 
     const formData = {
       email: enteredEmail,
       password: enteredPass,
+      text: enteredText,
     };
     console.log(formData);
-    setEnteredEmail('')
-    setEnteredPass('')
-  };
+    setEnteredEmail("");
+    setEnteredPass("");
+    setEnteredText("");
+  };  
   return (
     <>
-      <h1 style={{ textAlign: "center", marginTop: "1rem" }}> Main content </h1>
+      <h1 style={{ textAlign: "center", marginTop: "1rem" }}> {props.title}</h1>
 
       <form
-        style={{ marginTop: "3rem", width: "70%", marginLeft: "16rem" }}
+        style={{
+          marginTop: "3rem",
+          width: "70%",
+          marginLeft: "16rem",
+          maxWidth: "100%",
+        }}
         onSubmit={submitHandler}
       >
         <div className="form-group" style={{ marginTop: "2rem" }}>
@@ -59,7 +70,20 @@ export default function Main() {
             onChange={passHandler}
           />
         </div>
-        <div className="form-group form-check">
+        <div className="form-group my-4">
+          <label htmlFor="exampleFormControlTextarea1">
+            <h1>Your message</h1>
+          </label>
+          <textarea
+            className="form-control"
+            id="exampleFormControlTextarea1"
+            rows="5"
+            placeholder="Type your message here..."
+            value={enteredText}
+            onChange={textHandler}
+          ></textarea>
+        </div>
+        {/* <div className="form-group form-check">
           <input
             type="checkbox"
             className="form-check-input"
@@ -68,7 +92,7 @@ export default function Main() {
           <label className="form-check-label" htmlFor="exampleCheck1">
             Check me out
           </label>
-        </div>
+        </div> */}
         <button
           type="submit"
           className="btn btn-primary "

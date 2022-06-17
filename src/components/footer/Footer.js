@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="footer-copyright text-center py-3">
           © 2020 Copyright:
-          <a href="https://reactjs.org/"> react.com</a>
+          <a href="https://reactjs.org/" target="_blank"> react.com</a>
         </div>
       </footer>
     </>
