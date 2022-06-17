@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Name } from "../../App";
 export default function Footer() {
   return (
     <>
@@ -17,7 +18,6 @@ export default function Footer() {
                 <i className="fas fa-search" aria-hidden="true"></i>
               </form>
             </div>
-
             <div className="col-md-6 mb-4">
               <form className="input-group">
                 <input

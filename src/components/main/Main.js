@@ -26,7 +26,7 @@ export default function Main(props) {
     setEnteredEmail("");
     setEnteredPass("");
     setEnteredText("");
-  };  
+  };
   return (
     <>
       <h1 style={{ textAlign: "center", marginTop: "1rem" }}> {props.title}</h1>
